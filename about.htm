@@ -1,0 +1,425 @@
+<html>
+    <head>
+      <title>LMRC: Lucknow Metro Rail Corporation</title>
+      <link rel="icon" type="image/png" href="Image/lmrc.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/hover-min.css">
+        <link rel="stylesheet" href="css/all.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <style>
+            @media screen {
+                    .dropdown:hover .dropdown-menu,
+                    .btn-group:hover .dropdown-menu {
+                      display: block;
+                    }
+                    .dropdown-menu {
+                      margin: auto;
+                    }
+                    .dropdown-toggle {
+                      margin: auto;
+                    }
+                    .navbar .dropdown-toggle,
+                    .nav-tabs .dropdown-toggle {
+                      margin: auto;
+                    }
+                }
+          
+            .rt{
+              background: grey;
+              min-height: 10px;
+            }
+            .rt1{
+              min-height: 120px;
+              background-color:  whitesmoke;
+              width: 1380px;
+            }
+            .me{
+          background-color: maroon;
+          color: white;
+          transition: 0.3s;
+          }
+
+          .me:hover {
+          background-color:rgb(224, 220, 220) ;
+          }
+          .p1 {
+                background: white;
+			    border: none;
+			    color: maroon;
+			    transition: 0.3s;
+			    }
+
+			    .p1:hover {
+			    background-color: rgb(219, 216, 216);
+			    color: maroon;
+			    }
+            .r1{
+                min-height: 40px;
+                border-bottom: 1px solid gray;
+            }
+            .r2{
+                min-height: 40px;
+                background: maroon;
+            }
+            .r3{
+                min-height: 45px;
+                border-bottom: 1px solid rgb(204, 201, 201);
+            }
+            .r4{
+                min-height: 300px;
+                margin-top: 40px;
+            }
+            .r5{
+                min-height: 300px;
+                margin-top: 30px;
+            }
+            .icon
+          {
+            color: white;
+            background-color: #3b5998;
+            
+            transform: 0.3s;
+            box-shadow: 0px 0px 2px 0px black;
+          }
+          .icon:hover
+          {
+            color:#3b5998; 
+            background-color: rgb(247, 245, 242);
+          }
+          .icon1
+          {
+            color: white;
+            background-color:#1DA1F2;
+            
+            transform: 0.3s;
+            box-shadow: 0px 0px 2px 0px black;
+          }
+          .icon1:hover
+          {
+            color:#1DA1F2; 
+            background-color: rgb(247, 245, 242);
+
+          }
+          .search-box{
+	position: absolute;
+	top: 80%;
+	right: 23%;
+	transform: translate(-0%,-50%);
+	background: white;
+	height: 50px;
+	border-radius: 50px;
+	padding: 5px;
+    border: 1px solid maroon;
+}
+
+.search-box:hover .search-txt{
+	width: 100px;
+	padding: 0 3px;
+}
+
+.search-box:hover .search-btn{
+	background: gray;
+    color: white;
+}
+
+
+.search-btn{
+	color:white;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: maroon;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.search-txt{
+	border:none;
+	outline: none;
+	background: none;
+	float: left;
+	padding: 0;
+	color:#fff;
+	font-size: 16px;
+	line-height: 40px;
+	width: 0;
+	transition: width 400ms;
+
+}
+.icon2
+          {
+            color: white;
+            background-color:rgb(255, 20, 20);
+            
+            transform: 0.3s;
+            box-shadow: 0px 0px 2px 0px black;
+          }
+          .icon2:hover
+          {
+            color:rgb(255, 20, 20); 
+            background-color: rgb(247, 245, 242);
+          }
+          </style>
+          <script>
+          function display_c() {
+      var refresh = 1000; // Refresh rate in milli seconds
+      mytime = setTimeout('display_ct()', refresh)
+    }
+
+    function display_ct() {
+      var timex = new Date();
+      var time = timex.getHours() + ":" + timex.getMinutes() + ":" + timex.getSeconds();
+      document.getElementById('ct').innerHTML = time;
+      display_c();
+    }
+
+
+    var today = new Date();
+    var month = new Array();
+    month[0] = "January"; month[1] = "February"; month[2] = "March"; month[3] = "April"; month[4] = "May"; month[5] = "June";
+    month[6] = "July"; month[7] = "August"; month[8] = "September"; month[9] = "October"; month[10] = "November"; month[11] = "December";
+    var date = today.getDate() + ' ' + (month[today.getMonth()]) + ' , ' + today.getFullYear();
+    jQuery(document).ready(function () { display_ct(); jQuery(".date-text").text(date); });
+        </script>
+    </head>
+    <body>
+      <div class="container-fluid">
+        <div class="row" style="height: 30px; background-color: gray;">
+          <div class="container">
+            <div class="row">
+            <div class="col-md-9"></div>
+              <div class="col-md-3">
+              <p class="py-3 font-weight-bold" style="  color: white; margin-top: 5px; " ><span class="date-text"></span> | <span class="badge badge-warning p-2" id="ct"></span>  
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-md-6">
+                    <img src="Image/logo.png" class="img img-responsive" alt="logo">
+                </div>
+                
+                
+                <div class="col-md-6" style=" min-height: 150px;">
+                  <img src="Image/help.png" style="margin-left: 60%; margin-top: 20px;" class="img img-responsive">
+                
+                	<div class="search-box" style="margin-left: 120px;">
+                    <input type="text" class="search-txt" placeholder="Search">
+                    <a class="search-btn">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <nav class="navbar navbar-default" style="background-color: maroon;">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color: white;" href="index.htm">HOME</a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">OUR SERVICES<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="fare.htm">Ticket Booking</a></li>
+                      <li><a href="mst.jsp">Metro GoSmart Card</a></li>
+                      <li><a href="metrot.htm">Train Availibility</a></li>
+                      <li><a href="map.htm">Metro Map</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">ABOUT<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="about.htm">About LMRC</a></li>
+                      <li><a href="team.htm">The LMRC Team</a></li>
+                      <li><a href="mdm.htm">MD Speaks</a></li>
+                    </ul>
+                  </li>
+                  <li class="me"><a href="reg.jsp" style="color: white;">JOIN US</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;">MEDIA<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="gallery.htm">Image Gallery</a></li>
+                      <li><a href="video.htm">Video Gallery</a></li>
+                      <li><a href="news.htm">News</a></li>
+                    </ul>
+                  </li>
+                  <li class="me"><a href="contact.jsp" style="color: white;">CONTACT US</a></li>
+                  
+                  
+                  </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </div>
+		<script>   
+			$(document).ready(function() {
+				$(".dropdown, .btn-group").hover(function() {
+					var dropdownMenu =
+						$(this).children(".dropdown-menu");
+					if (dropdownMenu.is(":visible")) {
+						dropdownMenu.parent().toggleClass("open");
+					}
+				});
+			});
+    </script>
+        </div>
+        <div class="container-fluid" style="margin-top: -23px;">
+                  <div class="row" style="min-height: 20px;"></div>
+        <div class="row">
+          <div class="col-md-11"></div>
+          <div class="col-md-1">
+              <div row>
+                  <div class="col-md-6"></div>
+                  <a href="https://www.facebook.com/pages/category/Government-Organization/Lucknow-Metro-Rail-Corporation-LMRC-1132439606877647/"><div class="col-md-6 hvr hvr-bubble-float-right icon" style="min-height: 40px;margin-top: 100px;position: fixed;z-index: 1; ">
+                    <i class="fab fa-facebook" style="font-size: 30px; text-align: center; padding-top: 5px;"></i>
+                  </div></a>           
+              </div>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-md-11"></div>
+        <div class="col-md-1">
+            <div row>
+                <div class="col-md-6"></div>
+                <a href="https://twitter.com/OfficialUPMetro?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><div class="col-md-6 hvr hvr-bubble-float-right icon1" style="min-height: 40px;margin-top: 140px;position: fixed;z-index: 1;">
+                  <i class="fab fa-twitter" style="font-size: 30px; text-align: center; padding-top: 5px;"></i>
+                </div></a>          
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+      <div class="col-md-11"></div>
+      <div class="col-md-1">
+          <div row>
+              <div class="col-md-6"></div>
+              <a href="#"><div class="col-md-6 hvr hvr-bubble-float-right icon2" style="min-height: 40px;margin-top: 182px;position: fixed;z-index: 1;">
+                <i class="fa fa-envelope" style="font-size: 30px; text-align: center; padding-top: 5px;"></i>
+              </div></a>          
+          </div>
+      </div>
+  </div>
+        </div>
+        <div class="container-fluid" style="background-image: url('Image/loc.png');min-height: 130px;margin-top: -23px;">
+            <div class="row" style="background-color:rgb(17, 1, 1,0.7);min-height: 130px;">
+                <div class="col-md-3">
+                    <p style="color: white;padding-top: 25px; font-size: 17px;"><a href="index.htm" style="color:rgb(184, 7, 7);text-decoration: none; padding-left: 70px;">Home </a>&nbsp; / &nbsp;<a href="#" style="color: rgb(117, 117, 117);text-decoration: none;"> About LMRC</a></p>
+                    <p style="color: white;font-size: 27px;padding-left:75px ;font-family: Courier New;">About LMRC</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row" style="min-height: 30px;"></div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="r1">
+                            <p style="font-size: 25px;">About<b style="color: maroon;"> LMRC</b></p>
+                        </div>
+                        <div class="r4">
+                            <img src="About/About1.jpg" alt="metro" class="img img-thumbnail">
+                        </div>
+                        <div class="r5">
+                            <p style="text-align: justify; font-size: 15px;">Lucknow is the capital of Uttar Pradesh, the most populous state of India. It is known for its rich cultural heritge. The present population of Lucknow City is more than 3 million. Being an important service and trading centre, Lucknow continues to grow and attract large number of people to the city. The rapid growth of the city and the associated urban sprawl has accentuated the demand-supply mismatch admist contrained public transport infrastructure.</p>
+                            <p style="text-align: justify; font-size: 15px;">Lucknow Metro is a rapid transit system serving the city of Lucknow in the Indian state of Uttar Pradesh. Construction of the line begun on 27 September 2014 with the 8.5 km (5.3 mi) stretch from Transport Nagar to Charbagh Railway Station which began its commercial operation on 5 September 2017, making it the fastest built metro rail system in the country. Full operation on Red Line stretch from Chaudhary Charan Singh International Airport metro station to Munshi Pulia metro station began operation on 9 March 2019.</p>
+                            <p style="text-align: justify; font-size: 15px;">The Lucknow metro cover a distance of 22.87 km with 21 stations. It is the eighth longest operational metro network in India after the Delhi Metro, Hyderabad Metro, Chennai Metro, Namma Metro, Kolkata Metro, Noida Metro and Kochi Metro.</p>
+                            <p style="text-align: justify; font-size: 15px;">The Lucknow metro project is the most expensive transport system in Uttar Pradesh to date with an estimated total cost for Phase 1A (Red Line) and 1B (Blue Line) of about $2 billion, of which ₹6,928 crore (US$970 million) is being spent on phase 1A. The Lucknow Metro Rail Corporation, a 50:50 joint venture between the Government of India and the Government of Uttar Pradesh, was established to build and operate the metro.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="r2">
+                            <p style="color: white;font-size: 19px; padding-left: 10px; padding-top:5px ;">About</p>
+                        </div>
+                        <a href="about.htm" style="text-decoration: none;"><div class="r3 p1">
+                            <p style="color: maroon; padding-top: 12px;text-decoration: none; padding-left: 5px;"><i class="fa fa-caret-right"></i> About LMRC</p>
+                        </div></a>
+                        <a href="team.htm" style="text-decoration: none;"><div class="r3 p1">
+                            <p style="color: black; padding-top: 12px;text-decoration: none; padding-left: 5px;"><i class="fa fa-caret-right"></i> The LMRC Team</p>
+                        </div></a>
+                        <a href="mdm.htm" style="text-decoration: none;"><div class="r3 p1">
+                            <p style="color: black; padding-top: 12px;text-decoration: none; padding-left: 5px;"><i class="fa fa-caret-right"></i> MD Speaks</p>
+                        </div></a>
+                    </div> 
+                </div>
+            </div>
+            <div class="row" style="min-height: 20px;"></div>
+        </div>
+        <div class="container-fluid" style="background-color: maroon;min-height: 250px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h5 style="color: white;font-size: 22px;padding-top: 50px;padding-left: 50px;"> | About LMRC</h5>
+                <ul class="list-unstyled quick-links">
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="about.htm"><i class="fas fa-caret-right"></i> About</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="contact.jsp"><i class="fas fa-caret-right"></i> Contact Us</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="team.htm"><i class="fas fa-caret-right"></i> The LMRC Team</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h5 style="color: white;font-size: 22px;padding-top: 50px;padding-left: 50px;"> | Helpful Information</h5>
+                <ul class="list-unstyled quick-links">
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="fare.htm"><i class="fas fa-caret-right"></i> Fare Details</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="map.htm"><i class="fas fa-caret-right"></i> Metro Route Map</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="reg.jsp"><i class="fas fa-caret-right"></i> Registration</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="mst.jsp"><i class="fas fa-caret-right"></i> Register GoSmart Card</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h5 style="color: white;font-size: 22px;padding-top: 50px;padding-left: 50px;"> | Policy</h5>
+                <ul class="list-unstyled quick-links">
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="tou.htm"><i class="fas fa-caret-right"></i> Tearms of Use</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="policy.htm"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="hpolicy.htm"><i class="fas fa-caret-right"></i> Hyperlink Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h5 style="color: white;font-size: 22px;padding-top: 50px;padding-left: 50px;"> | Other Govt. Site</h5>
+                <ul class="list-unstyled quick-links">
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="https://www.india.gov.in/"><i class="fas fa-caret-right"></i> Goverment of India</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="http://www.indianrail.gov.in/enquiry/StaticPages/StaticEnquiry.jsp?StaticPage=index.html"><i class="fas fa-caret-right"></i> Indian Railways</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="https://up.gov.in/"><i class="fas fa-caret-right"></i> Govt of U.P</a></li>
+                  <li style="padding-top: 10px;"><a style="color: white;padding-left: 60px;" href="https://www.makeinindia.com/"><i class="fas fa-caret-right"></i> Make in India</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid" style="min-height: 100px;background-color: rgb(92, 2, 2);">
+          <div class="container">
+            <div class="row" style="min-height: 50px;">
+              <div class="col-md-12">
+                <center>
+                  <br>
+                  <a href="https://www.facebook.com/pages/category/Government-Organization/Lucknow-Metro-Rail-Corporation-LMRC-1132439606877647/"><i class="fab fa-facebook" style="color: white;font-size: 30px;padding-top: 5px;"></i></a>
+                  <a href="https://twitter.com/OfficialUPMetro?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter" style="color: white;font-size: 30px;padding-top: 5px;padding-left: 20px;"></i></a>
+                  <a href="#"><i class="fas fa-envelope" style="color: white;font-size: 30px;padding-top: 5px;padding-left: 20px;"></i></a>
+                </center>
+              </div>
+            </div>
+            <div class="row" style="min-height: 50px;">
+              <div class="col-md-8">
+                <p style="color: white;"><b>@ Design & Developed by : Team MMIT Siddharthnagar</b></p>
+              </div>
+              <div class="col-md-4">
+                <p style="color: white;"><b>Registered Candidate:</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
